@@ -37,7 +37,7 @@ namespace WebApplication1
             // 1. Dodawanie dokumentacji
             services.AddSwaggerGen(config =>
             {
-                config.SwaggerDoc("v1", new OpenApiInfo{Title="Students App API", Version="v1" });
+                config.SwaggerDoc("v1", new OpenApiInfo{Title="Students App API [s16446]", Version="v1"});
             });
         }
 
@@ -52,7 +52,7 @@ namespace WebApplication1
             // Middleware
             app.UseSwagger();
             app.UseSwaggerUI(
-                config => { config.SwaggerEndpoint("/swagger/v1/swagger.json","Students App API");
+                config => { config.SwaggerEndpoint("/swagger/v1/swagger.json","Students App API [s16446]");
                     }
                 );
 
@@ -60,12 +60,10 @@ namespace WebApplication1
                 if (!context.Request.Headers.ContainsKey("Index"))
                 {
                     context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                    await context.Response.WriteAsync("ERROR [Middleware]: Musisz podaæ numer indeksu");
+                    await context.Response.WriteAsync("ERROR [Middleware]: Musisz podac numer indeksu");
                     return;
                 }   
                 await next();
-                
-                
             });
             
             app.UseMiddleware<LoggingMiddleware>();
