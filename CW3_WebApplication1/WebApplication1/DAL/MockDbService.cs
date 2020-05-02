@@ -84,14 +84,14 @@ namespace WebApplication1.DAL
                 _students.Remove(student);
         }
 
-        public Boolean FindStudent(string index)
+        public Student FindStudent(string index)
         {
             for(int i = 0; i < _students.Count; i++) {
                 if (_students[i].IndexNumber.Equals(index)){
-                    return true;
+                    return _students[i];
                 }
             }
-            return false;
+            return null;
         }
 
 

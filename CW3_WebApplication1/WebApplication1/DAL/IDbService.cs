@@ -14,7 +14,7 @@ namespace WebApplication1.DAL
 
         void DeleteStudent(Student student);
 
-        Boolean FindStudent(string index);
+        Student FindStudent(string index);
 
         IEnumerable<Student> GetStudent(string id);
 

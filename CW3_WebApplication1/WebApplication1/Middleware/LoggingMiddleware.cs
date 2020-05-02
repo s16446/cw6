@@ -11,10 +11,12 @@ namespace WebApplication1.Middleware
 	public class LoggingMiddleware
 	{
 		private readonly RequestDelegate _next;
-		private const string FILENAME_LOG = "requestsLog.txt";
+		private const string FILENAME = "requestsLog.txt";
+		private string FILEPATH;
 
 		public LoggingMiddleware(RequestDelegate next)
 		{ 
+			FILEPATH = System.IO.Directory.GetCurrentDirectory() + "\\" + FILENAME;
 			_next = next;
 		}
 
@@ -31,10 +33,12 @@ namespace WebApplication1.Middleware
 				using(var reader = new StreamReader(context.Request.Body, Encoding.UTF8, true, 1024, true))
 				{ 
 					bodyStr = await reader.ReadToEndAsync();
+					
+					Console.WriteLine("BodySTR" + bodyStr.Length);
+					
 					context.Request.Body.Position = 0;
-					Console.WriteLine("BODY" + bodyStr);
 				}
-				using (StreamWriter writer = new StreamWriter(System.IO.Directory.GetCurrentDirectory() + "\\" + FILENAME_LOG))
+				using (StreamWriter writer = File.AppendText(FILEPATH))
 				{  
 				   writer.WriteLine("REQUEST timestamp:"  + System.DateTime.Now.ToString("yyyyMMddhhmmss"));
 				   writer.WriteLine("PATH: " + path);

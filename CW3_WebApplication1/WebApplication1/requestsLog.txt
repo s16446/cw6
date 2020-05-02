@@ -1,5 +1,193 @@
-REQUEST timestamp:20200502095543
-PATH: /api/students/s1111
-METHOD: DELETE
+REQUEST timestamp:20200502100459
+PATH: /api/students/s11111
+METHOD: GET
 QUERY: 
 BODY: 
+REQUEST timestamp:20200502100519
+PATH: /api/students/s11111
+METHOD: PATCH
+QUERY: 
+BODY: 
+REQUEST timestamp:20200502100519
+PATH: /api/students/s11111
+METHOD: PATCH
+QUERY: 
+BODY: 
+REQUEST timestamp:20200502100520
+PATH: /api/students/s11111
+METHOD: PATCH
+QUERY: 
+BODY: 
+REQUEST timestamp:20200502100813
+PATH: /api/students/s11111
+METHOD: PATCH
+QUERY: 
+BODY: 
+REQUEST timestamp:20200502100902
+PATH: /api/students/s11111
+METHOD: GET
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502100906
+PATH: /api/students/s11111
+METHOD: POST
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502100915
+PATH: /api/students/
+METHOD: POST
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502100924
+PATH: /api/students/
+METHOD: DELETE
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502100931
+PATH: /api/students/s1456
+METHOD: DELETE
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502101224
+PATH: /api/students/s1456
+METHOD: DELETE
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502101230
+PATH: /api/students/s1456
+METHOD: POST
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502101235
+PATH: /api/students/s1456
+METHOD: GET
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502101241
+PATH: /api/students/
+METHOD: GET
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502101245
+PATH: /api/students/
+METHOD: POST
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502101249
+PATH: /api/students/
+METHOD: DELETE
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502101251
+PATH: /api/students/
+METHOD: DELETE
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502101258
+PATH: /api/students/s1456
+METHOD: DELETE
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
+REQUEST timestamp:20200502101303
+PATH: /api/students/s1456
+METHOD: GET
+QUERY: 
+BODY: {
+	"IndexNumber":"s1456",
+	"FirstName":"Aleksandra",
+	"LastName":"Sawczuk",
+	"BirthDate":"21.08.1984",
+	"Studies":"IT"
+	
+}
