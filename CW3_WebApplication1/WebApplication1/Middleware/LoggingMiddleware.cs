@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace WebApplication1.Middleware
 {
-	
 	public class LoggingMiddleware
 	{
 		private readonly RequestDelegate _next;
+		private const string FILENAME_LOG = "requestsLog.txt";
 
-		public LoggingMiddleware( RequestDelegate next)
+		public LoggingMiddleware(RequestDelegate next)
 		{ 
 			_next = next;
 		}
@@ -28,15 +28,23 @@ namespace WebApplication1.Middleware
 				string queryString = context.Request.QueryString.ToString();
 				string bodyStr = "";
 
-				using(var reader=new StreamReader(context.Request.Body, Encoding.UTF8, true, 1024, true))
+				using(var reader = new StreamReader(context.Request.Body, Encoding.UTF8, true, 1024, true))
 				{ 
 					bodyStr = await reader.ReadToEndAsync();
 					context.Request.Body.Position = 0;
+					Console.WriteLine("BODY" + bodyStr);
 				}
-				// zapisac do pliku
-				// zapisac do bazy danyc
+				using (StreamWriter writer = new StreamWriter(System.IO.Directory.GetCurrentDirectory() + "\\" + FILENAME_LOG))
+				{  
+				   writer.WriteLine("REQUEST timestamp:"  + System.DateTime.Now.ToString("yyyyMMddhhmmss"));
+				   writer.WriteLine("PATH: " + path);
+				   writer.WriteLine("METHOD: " + method);
+				   writer.WriteLine("QUERY: " + queryString);
+				   writer.WriteLine("BODY: " + bodyStr);
+				}
 			}
-				if (_next!=null) await _next(context);
+				if (_next!=null) 
+					await _next(context);
 		}
 	}
 }

@@ -54,8 +54,15 @@ namespace WebApplication1.Controllers
         [HttpDelete("{id}")] // delete
         public IActionResult DeleteStudent(string id)
         {
-            _dbService.DeleteStudent(_dbService.GetStudent(id).ElementAt(0));
-            return Ok("Usuwanie zakonczone" + id);
+            if (_dbService.FindStudent(id)) 
+            {
+                _dbService.DeleteStudent(_dbService.GetStudent(id).ElementAt(0));
+                return Ok("Usuwanie zakonczone" + id);
+            }
+        else
+            return NotFound("Nie znaleziono studenta o indeksie: " + id);
         }
+
+
     }
 }

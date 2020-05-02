@@ -80,8 +80,20 @@ namespace WebApplication1.DAL
 
         public void DeleteStudent(Student student)
         {
-            _students.Remove(student);
+            if (_students.Contains(student))
+                _students.Remove(student);
         }
+
+        public Boolean FindStudent(string index)
+        {
+            for(int i = 0; i < _students.Count; i++) {
+                if (_students[i].IndexNumber.Equals(index)){
+                    return true;
+                }
+            }
+            return false;
+        }
+
 
         public IEnumerable<Enrollment> GetEnrollments(string id, int semester) {
             List<Enrollment> wpisy = null;
